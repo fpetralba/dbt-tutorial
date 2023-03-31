@@ -1,3 +1,8 @@
+{{ config(
+    post_hook=[delete_max_id()]
+) }}
+
+
 with customers as (
     select * from {{ ref('stg_customers')}}
 ),
